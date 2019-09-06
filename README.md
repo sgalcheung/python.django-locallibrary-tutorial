@@ -92,13 +92,10 @@ python manage.py createsuperuser
 * 安装客户端
 * 创建并上传网站
  ```bash
- # 更改，可选
+ heroku create                                    # 创建一个名为 heroku 的 git remote
  git add .
  git commit -m "Description changes"
  git push origin master
- git push heroku master
- # 开始部署
- heroku create                                    # 创建一个名为 heroku 的 git remote
  git push heroku master                           # 推送到 Heroku 储存库
  heroku run python manage.py migrate              # 执行迁移操作
  heroku run python manage.py createsuperuser      # 创建我们的管理超级用户
